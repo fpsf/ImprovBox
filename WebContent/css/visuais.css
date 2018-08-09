@@ -1,0 +1,58 @@
+/*Margin Cheatsheet:
+
+    margin: 25px 50px 75px 100px;
+        top margin is 25px
+        right margin is 50px
+        bottom margin is 75px
+        left margin is 100px
+*/
+
+.margem{}
+
+/*
+Se não possuir a fonte localmente no seu computador,
+utilizar o "src" abaixo:
+src: url("https://fonts.googleapis.com/css?family=Ubuntu");
+*/
+
+/*
+src: url("/usr/share/fonts/extra/Ubuntu");
+src: url("fonts/Ubuntu/Ubuntu-Regular.ttf");
+src: url("fonts/Ubuntu/Ubuntu-Regular.ttf") format('truetype');
+*/
+@font-face{
+    font-family: Ubuntu;
+    src: url("fonts/Ubuntu/Ubuntu-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: #30DFD9;
+    }
+}
+
+label{
+    font-family: Ubuntu;
+}
+
+p{
+    font-family: Ubuntu;
+}
+
+a{
+    font-family: Ubuntu;
+    /*margin-top: 10px;*/
+}
+
+input.margem{
+    font-family: Ubuntu;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+/*input[type=password] {
+    margin: 10px 0;
+    box-sizing: border-box;
+}*/

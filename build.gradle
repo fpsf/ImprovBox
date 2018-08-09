@@ -1,0 +1,44 @@
+apply plugin:'java'
+apply plugin:'eclipse'
+apply plugin: 'war'
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir "Java Resources/src"
+        }
+
+        resources {
+            srcDir "Java Resources/src"
+        }
+    }
+}
+
+dependencies {
+
+    testCompile("junit:junit")
+    
+    compile group: 'org.hibernate', name: 'hibernate-gradle-plugin', version: '5.3.1.Final'
+    
+	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
+	
+	// https://mvnrepository.com/artifact/javax.servlet/servlet-api
+	providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+	
+	// https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api
+	compile group: 'org.apache.tomcat', name: 'tomcat-servlet-api', version: '8.0.27'
+	
+	// https://mvnrepository.com/artifact/javax/javaee-api
+	providedCompile group: 'javax', name: 'javaee-api', version: '8.0'
+	
+	compile('javax.servlet:jstl:1.2')
+	
+}
