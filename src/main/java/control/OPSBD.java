@@ -17,15 +17,11 @@ public class OPSBD {
 	}
 	
 	public void guardar(int id, String nome, byte[] arquivo) {
-		if(dao.existe(id) == false) {
-			dao.objeto(id, nome, arquivo);
-			dao.guardar();
+		if(dao.existe(id) != false) {
+			deletar(id);
 		}
-		else {
-			dao.objeto(id, nome, arquivo);
-			dao.atualizar();
-		}
-		// dao.manager.getTransaction().commit();
+		dao.objeto(id, nome, arquivo);
+		dao.guardar();
 	}
 	
 	public void recuperar(int id) {

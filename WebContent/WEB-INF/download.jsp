@@ -29,7 +29,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Segunda Avaliação</title>
     </head>
-    <body id=download title="Página de Download">
+    <body id=download>
     	<p>Este botão faz o download do arquivo:</p>
         <form action="redirdown" method="get">
         	<p>Nome do arquivo: </p>

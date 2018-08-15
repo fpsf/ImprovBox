@@ -28,7 +28,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Segunda Avaliação</title>
     </head>
-    <body id=deletar Title="Página de Exclusão">
+    <body id=deletar>
     	<p>Este botão apaga o arquivo:</p>
     	<form action="updel" method="get">
     		<p>Nome do arquivo: </p>

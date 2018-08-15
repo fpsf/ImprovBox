@@ -1,6 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
+<%@page import="java.io.IOException" %>
 
 <html>
     <head>
@@ -13,13 +14,17 @@
         <title>Segunda Avaliação</title>
     </head>
 
-    <body id=updownload title="Página de Navegação">
-        <form action="redirecao" method="get">
-            <button type="submit" name="up_redir" value="upload">Upload</button>
-            <button type="submit" name="down_redir" value="download">Download</button>
-            <button type="submit" name="del_redir" value="deletar">Deletar</button><br/><br/>
-        </form>
-        <p>Após o término dos testes, a aplicação volta para esta página.</p>
-        <p>No momento, as operações acima são possíveis com somente um arquivo.</p>
+    <body id=index>
+    	<h1>Login:</h1><br/>
+        <label for="usuario">Usuário:</label><br/>
+        <input class=margem name=nome id=usuario type="text" required/><br/>
+        <label for="senha">Senha:</label><br/>
+        <input class=margem name=senha id=senha type="password" required/><br/>
+        <button class=margem onclick="validarLogin()" >Entrar</button>
+        <br/>
+        <p>Para cadastrar um usuário, utilize o botão abaixo:</p>
+        <form action=redircadastro method=get>
+    		<input class=margem type='submit'/>
+    	</form>
     </body>
 </html>

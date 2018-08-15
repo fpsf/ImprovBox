@@ -33,11 +33,23 @@ dependencies {
 	// https://mvnrepository.com/artifact/javax.servlet/servlet-api
 	providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
 	
+	// https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api
+	providedCompile group: 'javax.servlet.jsp', name: 'jsp-api', version: '2.2'
+	
 	// https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api
 	compile group: 'org.apache.tomcat', name: 'tomcat-servlet-api', version: '8.0.27'
 	
+	// https://mvnrepository.com/artifact/commons-io/commons-io
+	compile group: 'commons-io', name: 'commons-io', version: '2.4'
+	
 	// https://mvnrepository.com/artifact/javax/javaee-api
 	providedCompile group: 'javax', name: 'javaee-api', version: '8.0'
+	
+	// https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+	compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+	
+	// https://mvnrepository.com/artifact/org.json/json
+	compile group: 'org.json', name: 'json', version: '20160810'
 	
 	compile('javax.servlet:jstl:1.2')
 	

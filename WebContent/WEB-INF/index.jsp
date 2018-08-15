@@ -13,13 +13,15 @@
         <title>Segunda Avaliação</title>
     </head>
 
-    <body id=updownload title="Página de Navegação">
-        <form action="redirecao" method="get">
+    <body id=updownload>
+        <form id="navform" action="redirecao" method="get">
+        	<!-- 
             <button type="submit" name="up_redir" value="upload">Upload</button>
             <button type="submit" name="down_redir" value="download">Download</button>
-            <button type="submit" name="del_redir" value="deletar">Deletar</button><br/><br/>
+            <button type="submit" name="del_redir" value="deletar">Deletar</button><br/>
+             -->
         </form>
-        <p>Após o término dos testes, a aplicação volta para esta página.</p><br/><br/>
+        <p>Após o término dos testes, a aplicação volta para esta página.</p>
         <p>No momento, as operações acima são possíveis com somente um arquivo.</p>
     </body>
 </html>

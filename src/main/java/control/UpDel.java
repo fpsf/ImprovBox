@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
+import org.apache.commons.io.IOUtils;
+
 
 public class UpDel extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -38,7 +40,7 @@ public class UpDel extends HttpServlet {
 			Part part = request.getPart("arquivo");
 			String name = Paths.get(part.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
 		    InputStream content = part.getInputStream();
-		    byte[] arq = new byte[content.available()];
+		    byte[] arq = IOUtils.toByteArray(content);
 		    OPSBD ops = new OPSBD();
 		    ops.guardar(1, name, arq);
 			RequestDispatcher disp = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");

@@ -4,32 +4,62 @@
     <servlet-name>Redirecao</servlet-name>
     <servlet-class>control.Redirecao</servlet-class>
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>Redirecao</servlet-name>
     <url-pattern>/redirecao</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <servlet-name>UpDel</servlet-name>
     <servlet-class>control.UpDel</servlet-class>
     <multipart-config>
         <!-- enter your values -->
-        <max-file-size>20848820</max-file-size> 
-        <max-request-size>418018841</max-request-size>
-        <file-size-threshold>1048576</file-size-threshold>
+        <max-file-size>4294967296</max-file-size> 
+        <max-request-size>4294967296</max-request-size>
+        <file-size-threshold>0</file-size-threshold>
     </multipart-config>
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>UpDel</servlet-name>
     <url-pattern>/updel</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <servlet-name>RedirDown</servlet-name>
     <servlet-class>control.RedirDown</servlet-class>
   </servlet>
+  
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>RedirCadastro</display-name>
+  	<servlet-name>RedirCadastro</servlet-name>
+  	<servlet-class>control.RedirCadastro</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>GetUsuario</display-name>
+  	<servlet-name>GetUsuario</servlet-name>
+  	<servlet-class>control.GetUsuario</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
     <servlet-name>RedirDown</servlet-name>
     <url-pattern>/redirdown</url-pattern>
   </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>RedirCadastro</servlet-name>
+  	<url-pattern>/redircadastro</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GetUsuario</servlet-name>
+  	<url-pattern>/getusuario</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

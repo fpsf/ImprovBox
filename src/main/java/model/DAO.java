@@ -4,11 +4,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
-
 public class DAO {
 	
 	Arquivos arquivo;
@@ -37,8 +32,6 @@ public class DAO {
 		this.arquivo = aq;
 	}
 	
-	
-	
 	public void guardar() {
 		// manager.getTransaction().begin();        
 	    manager.persist(arquivo);
@@ -47,7 +40,7 @@ public class DAO {
 	    manager.getTransaction().commit();
 	}
 	
-	@SuppressWarnings("deprecation")
+	/*@SuppressWarnings("deprecation")
 	public void atualizar() {
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.getSessionFactory().getCurrentSession();
@@ -56,7 +49,7 @@ public class DAO {
         tr.commit();
         session.close();
         manager.getTransaction().commit();
-	}
+	}*/
 	
 	public void remover(int id) {
 		arquivo = manager.find(Arquivos.class, id);
@@ -76,7 +69,6 @@ public class DAO {
 	public Arquivos localizar(int id2) {
 		// manager = factory.createEntityManager();
 		return manager.find(Arquivos.class, id2);
-		
 	}
 	
 	public Arquivos localiza() {

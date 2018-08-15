@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon=eclipse
+Icon[pt_BR]=eclipse
+Name[pt_BR]=Eclipse
+Exec=/home/swagmence/eclipse/jee-photon/eclipse/eclipse
+Comment[pt_BR]=Eclipse Java IDE
+Name=Eclipse
+Comment=Eclipse Java IDE

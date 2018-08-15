@@ -17,9 +17,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Segunda Avaliação</title>
     </head>
-    <body id=upload title="Página de Upload">
+    <body id=upload>
         <form action="updel" method="post" enctype="multipart/form-data">
-            <p>Poste um arquivo aqui (Capacidade Máxima: 255 Bytes):</p><br/>
+            <p>Poste um arquivo aqui (Capacidade Máxima: Aproximadamente 4GB):</p><br/>
             <input type="file" name="arquivo"/>
             <button class=margem type='submit'>
             	Enviar
