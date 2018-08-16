@@ -10,7 +10,12 @@
    		try{
    			OPSBD ops = new OPSBD();
 			ops.recuperar(1);
-			pageContext.setAttribute("nomearq", ops.arqtst.getNome());
+			if(ops.arqtst.getNome() == ""){
+	   			pageContext.setAttribute("nomearq", "Sem arquivo. Tente postar um.");
+			}
+			else{
+				pageContext.setAttribute("nomearq", ops.arqtst.getNome());
+			}
    		}
    		catch (Exception e){
    			pageContext.setAttribute("nomearq", "Sem arquivo. Tente postar um.");
@@ -23,7 +28,7 @@
         <link rel="stylesheet" href="js/PastaScripts/jquery-ui-1.12.1.custom/jquery-ui.css"/>
         <script src="js/PastaScripts/jquery-3.3.1.js"></script>
         <script src="js/PastaScripts/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-        <script src="js/PastaScripts/acoes.js"></script>
+        <script src="js/PastaScripts/acoes.js" charset="utf-8"></script>
         <link rel="stylesheet" href="css/visuais.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Segunda Avaliação</title>

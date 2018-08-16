@@ -9,26 +9,36 @@ adm.nome = "admin";
 adm.senha = "admin";
 
 $(document).ready(function() {
-    if(document.location.href.substr(21) === "/ImprovBox/"){
+	// alert(window.location.pathname);
+    if(window.location.pathname === "/ImprovBox/"){
     	document.getElementById("index").addEventListener("mouseover", alert("Página de Login."));
     }
-    if(document.location.href.substr(21) === "/ImprovBox/redirecao"){
+    if(window.location.pathname === "/ImprovBox/redirecao"){
     	document.getElementById("updownload").addEventListener("mouseover", alert("Página de Navegação."));
     	criarBotoes();
     }
-    if(document.location.href.substr(21) === "/ImprovBox/updel"){
+    if(window.location.pathname === "/ImprovBox/redircadastro"){
+    	document.getElementById("index").addEventListener("mouseover", alert("Página de Login."));
+    }
+    if(window.location.pathname === "/ImprovBox/updel"){
     	document.getElementById("updownload").addEventListener("mouseover", alert("Página de Navegação."));
     	criarBotoes();
     }
-    if(document.location.href.substr(21) === "/ImprovBox/redirecao?del_redir=deletar"){
+    if(window.location.pathname === "/ImprovBox/redirdown"){
+    	document.getElementById("updownload").addEventListener("mouseover", alert("Página de Navegação."));
+    	criarBotoes();
+    }
+    /*
+    if(window.location.pathname === "/ImprovBox/redirecao?del_redir=deletar"){
     	document.getElementById("deletar").addEventListener("mouseover", alert("Página de Exclusão."));
     }
-    if(document.location.href.substr(21) === "/ImprovBox/redirecao?down_redir=download"){
+    if(window.location.pathname === "/ImprovBox/redirecao?down_redir=download"){
     	document.getElementById("download").addEventListener("mouseover", alert("Página de Download."));
     }
-    if(document.location.href.substr(21) === "/ImprovBox/redirecao?up_redir=upload"){
+    if(window.location.pathname === "/ImprovBox/redirecao?up_redir=upload"){
     	document.getElementById("upload").addEventListener("mouseover", alert("Página de Envio."));
     }
+    */
 });
 
 function criarBotoes(){
@@ -66,9 +76,13 @@ function validarLogin(){
     var senha = document.getElementById("senha").value;
     var res = "";
     function comecaValidacao(){
+    	if(window.location.pathname === "/ImprovBox/redircadastro"){
+    		window.history.replaceState({}, document.title,
+    				window.location.toString().substring(0, window.location.toString().indexOf("redircadastro")));
+    	}
     	var xreq = new XMLHttpRequest();
     	
-        xreq.open("GET", 'http://localhost:8080/ImprovBox/getusuario', false);
+        xreq.open("GET", window.location.href + 'getusuario', false);
         xreq.onreadystatechange = function (){
         	if (xreq.readyState === 4){
         		if (xreq.status === 200 || xreq.status === 0){
@@ -80,18 +94,18 @@ function validarLogin(){
         if (res !== ""){
         	usr = JSON.parse(res);
         	if ((usuario === usr.nome) && (senha === usr.senha)){
-    	    	window.location.replace("http://localhost:8080/ImprovBox/redirecao");
+    	    	window.location.replace(window.location.href + "redirecao");
     	    	// document.location.href = "/ImprovBox/redirecao";
     	    	return false;
     	    }
         }
 	    if ((usuario === adm.nome) && (senha === adm.senha)){
-	    	window.location.replace("http://localhost:8080/ImprovBox/redirecao");
+	    	window.location.replace(window.location.href + "redirecao");
 	    	// document.location.href = "/ImprovBox/redirecao";
 	    }
 	    else{
 	        alert("Utilize o login de teste!");
-	        window.location.replace("http://localhost:8080/ImprovBox/");
+	        // window.location.replace(window.location.href);
 	        // document.location.href = "/ImprovBox/";
 	    }
     }

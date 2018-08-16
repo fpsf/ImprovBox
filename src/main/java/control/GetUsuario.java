@@ -20,13 +20,18 @@ public class GetUsuario extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		try (FileReader file = new FileReader("/home/swagmence/eclipse-workspace/ImprovBox/usuario.txt")) {
-			char[] cbuf = new char[(int)new File("/home/swagmence/eclipse-workspace/ImprovBox/usuario.txt").length()];
+		// "/home/swagmence/eclipse-workspace/ImprovBox/usuario.txt"
+		try (FileReader file = new FileReader("usuario.txt")) {
+			char[] cbuf = new char[(int)new File("usuario.txt").length()];
 			file.read(cbuf);
 			String text = String.valueOf(cbuf);
+
 			PrintWriter out = response.getWriter();
 			out.println(text);
-		}
+		} /*catch (Exception e) {
+			System.out.println("não consegui ler o arquivo");
+			System.out.println(e.getStackTrace());
+		}*/
 	}
 
 	/**

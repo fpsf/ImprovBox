@@ -34,11 +34,11 @@ public class RedirCadastro extends HttpServlet {
 		JSONObject obj = new JSONObject();
 		obj.put("nome", usuario);
 		obj.put("senha", senha);
-		try (FileWriter file = new FileWriter("/home/swagmence/eclipse-workspace/ImprovBox/usuario.txt")) {
+		try (FileWriter file = new FileWriter("/usuario.txt")) {
 			file.write(obj.toJSONString());
 		}
 		dispatcher(request, response);
-		
+		// {"senha":"mich","nome":"duhast"}
 	}
 	
 	protected void dispatcher(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

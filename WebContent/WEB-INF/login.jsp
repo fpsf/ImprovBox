@@ -22,6 +22,7 @@
         <input class=margem name=senha id=senha type="password" required/><br/>
         <button class=margem onclick="validarLogin()" >Entrar</button>
         <br/>
+        <p>Não possui um usuário? Crie um.</p>
         <p>Para cadastrar um usuário, utilize o botão abaixo:</p>
         <form action=redircadastro method=get>
     		<input class=margem type='submit'/>

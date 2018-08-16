@@ -17,8 +17,9 @@ public class OPSBD {
 	}
 	
 	public void guardar(int id, String nome, byte[] arquivo) {
-		if(dao.existe(id) != false) {
+		if(dao.existe(id)) {
 			deletar(id);
+			dao = new DAO();
 		}
 		dao.objeto(id, nome, arquivo);
 		dao.guardar();
