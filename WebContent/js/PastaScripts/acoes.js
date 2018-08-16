@@ -11,14 +11,14 @@ adm.senha = "admin";
 $(document).ready(function() {
 	// alert(window.location.pathname);
     if(window.location.pathname === "/ImprovBox/"){
-    	document.getElementById("index").addEventListener("mouseover", alert("Página de Login."));
+    	document.getElementById("index").onmouseover = alert("Página de Login."); // .addEventListener("mouseover", alert("Página de Login."));
     }
     if(window.location.pathname === "/ImprovBox/redirecao"){
     	document.getElementById("updownload").addEventListener("mouseover", alert("Página de Navegação."));
     	criarBotoes();
     }
     if(window.location.pathname === "/ImprovBox/redircadastro"){
-    	document.getElementById("index").addEventListener("mouseover", alert("Página de Login."));
+    	document.getElementById("index").onmouseover = alert("Página de Login."); // .addEventListener("mouseover", alert("Página de Login."));
     }
     if(window.location.pathname === "/ImprovBox/updel"){
     	document.getElementById("updownload").addEventListener("mouseover", alert("Página de Navegação."));
