@@ -18,12 +18,14 @@
         <title>Segunda Avaliação</title>
     </head>
     <body id=upload>
-        <form action="updel" method="post" enctype="multipart/form-data">
+        <form id=upform action="updel" method="post" enctype="multipart/form-data">
             <p>Poste um arquivo aqui:</p><br/>
-            <input type="file" name="arquivo"/>
+            <input type="file" id=upinput name="arquivo" onchange="revelarBotao()"/>
+            <!-- 
             <button class=margem type='submit'>
             	Enviar
             </button>
+             -->
         </form>
     </body>
 </html>

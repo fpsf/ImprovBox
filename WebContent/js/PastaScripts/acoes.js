@@ -41,11 +41,32 @@ $(document).ready(function() {
     */
 });
 
+/*
+$('#upinput').on('change', function(){
+	var up = document.createElement("BUTTON");
+	var text = document.createTextNode("Enviar");
+	up.appendChild(text);
+	up.setAttribute('class', 'margem');
+	up.setAttribute('type', 'submit');
+	document.getElementById("upform").appendChild(up);
+});
+*/
+
+function revelarBotao(){
+	var up = document.createElement("BUTTON");
+	var text = document.createTextNode("Enviar");
+	up.appendChild(text);
+	up.setAttribute('class', 'margem');
+	up.setAttribute('type', 'submit');
+	document.getElementById("upform").appendChild(up);
+}
+
 function criarBotoes(){
 	
 	var up = document.createElement("BUTTON");
 	var text = document.createTextNode("Upload");
 	up.appendChild(text);
+	up.setAttribute('class', 'margem');
 	up.setAttribute('type', 'submit');
 	up.setAttribute('name', 'up_redir');
 	up.setAttribute('value', 'upload');
@@ -54,6 +75,7 @@ function criarBotoes(){
 	up = document.createElement("BUTTON");
 	text = document.createTextNode("Download");
 	up.appendChild(text);
+	up.setAttribute('class', 'margem');
 	up.setAttribute('type', 'submit');
 	up.setAttribute('name', 'down_redir');
 	up.setAttribute('value', 'download');
@@ -62,6 +84,7 @@ function criarBotoes(){
 	up = document.createElement("BUTTON");
 	text = document.createTextNode("Deletar");
 	up.appendChild(text);
+	up.setAttribute('class', 'margem');
 	up.setAttribute('type', 'submit');
 	up.setAttribute('name', 'del_redir');
 	up.setAttribute('value', 'deletar');
